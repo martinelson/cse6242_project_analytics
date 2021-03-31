@@ -12,7 +12,6 @@ scaler = MinMaxScaler()
 model = linear_model.LinearRegression()
 train_split = 0.7
 test_split = 0.3
-vif_filter_value = 5
 
 # reading in dataset and dropping columns
 df = pd.read_csv("trips_summary_test.csv")
