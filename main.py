@@ -14,7 +14,7 @@ test_split = 0.3
 df = pd.read_csv("trips_summary_sql.csv")
 
 #filtering out the pandemic
-#df = df[df.date > "1/1/2020"]
+df = df[df.date < "12/1/2019"]
 
 drop_cols = ['date', 'year', 'week_year', 'day_year', 'count', 'fare_tot', 'tip_tot', 'additional_tot', 'trip_total_tot']
 df.drop(drop_cols, axis=1, inplace=True)
