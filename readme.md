@@ -44,16 +44,15 @@
 |                  |                              |             |
 
 **Time Series splitting**
-
-| **This is a test for non-random  split since the data is close to time series data**  |                  |                              |             |
-|---------------------------------------------------------------------------------------|------------------|------------------------------|-------------|
-| Dep. Variable:                                                                        | total_revenue    | R-squared (uncentered):      | 0.729       |
-| Model:                                                                                | OLS              | Adj. R-squared (uncentered): | 0.729       |
-| Method:                                                                               | Least Squares    | F-statistic:                 | 1.690e+04   |
-| Date:                                                                                 | Thu, 01 Apr 2021 | Prob (F-statistic):          | 0.00        |
-| Time:                                                                                 | 14:41:09         | Log-Likelihood:              | -6.7888e+06 |
-| No. Observations:                                                                     | 734002           | AIC:                         | 1.358e+07   |
-| Df Residuals:                                                                         | 733885           | BIC:                         | 1.358e+07   |
-| Df Model:                                                                             | 117              |                              |             |
-| Covariance Type:                                                                      | nonrobust        |                              |             |
-|                                                                                       |                  |                              |             |
+| **This is a test for  non-random  split since the data is  close to time series data**  |  |  |  |
+|-|-|-|-|
+| Dep. Variable: | total_revenue | R-squared (uncentered): | 0.729 |
+| Model: | OLS | Adj. R-squared (uncentered): | 0.729 |
+| Method: | Least Squares | F-statistic: | 1.690e+04 |
+| Date: | Thu, 01 Apr 2021 | Prob (F-statistic): | 0.00 |
+| Time: | 14:41:09 | Log-Likelihood: | -6.7888e+06 |
+| No. Observations: | 734002 | AIC: | 1.358e+07 |
+| Df Residuals: | 733885 | BIC: | 1.358e+07 |
+| Df Model: | 117 |  |  |
+| Covariance Type: | nonrobust |  |  |
+|  |  |  |  |
