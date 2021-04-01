@@ -40,8 +40,7 @@
 | Df Residuals:                                          | 534204           | BIC:                         | 9.964e+06   |
 | Df Model:                                              | 113              |                              |             |
 | Covariance Type:                                       | nonrobust        |                              |             |
-|             
-|                  |                              |             |
+|  |  |  |  |
 
 **Time Series splitting**
 | **This is a test for  non-random  split since the data is  close to time series data**  |  |  |  |
