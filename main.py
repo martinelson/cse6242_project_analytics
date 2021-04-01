@@ -3,6 +3,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn import linear_model
 import statsmodels.api as sm
+from sklearn.linear_model import LinearRegression
+
 
 
 # creating scaling and regression model variables
@@ -14,8 +16,7 @@ test_split = 0.3
 df = pd.read_csv("trips_summary_sql.csv")
 
 #filtering out the pandemic
-df = df[df.date > "12/1/2019"]
-
+df['pre_covid'] = (df.date < "12/1/2019").astype("int")
 drop_cols = ['date', 'year', 'week_year', 'day_year', 'count', 'fare_tot', 'tip_tot', 'additional_tot', 'trip_total_tot']
 df.drop(drop_cols, axis=1, inplace=True)
 
