@@ -31,7 +31,6 @@ Test case-1 (df.date <12/1/2019 - Before the pandemic)
 Test case-2 (df.date >1/1/2020 - After the pandemic)
 
 | Dep. Variable:    | total_revenue    | R-squared (uncentered):      | 0.654       |
-|-------------------|------------------|------------------------------|-------------|
 | Model:            | OLS              | Adj. R-squared (uncentered): | 0.654       |
 | Method:           | Least Squares    | F-statistic:                 | 1.193e+04   |
 | Date:             | Thu, 01 Apr 2021 | Prob (F-statistic):          | 0.00        |
