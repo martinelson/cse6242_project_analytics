@@ -20,6 +20,7 @@ df = pd.read_csv("trips_summary_sql.csv")
 
 # filtering out the pandemic
 df['pre_covid'] = (df.date < "12/1/2019").astype("int")
+
 drop_cols = ['date', 'year', 'week_year', 'day_year', 'count', 'fare_tot', 'tip_tot', 'additional_tot',
              'trip_total_tot']
 df.drop(drop_cols, axis=1, inplace=True)
@@ -30,12 +31,20 @@ df = pd.get_dummies(df, columns=dummy_cols, drop_first=True)
 
 # splitting data
 np.random.seed(0)
-df_train, df_test = train_test_split(df, train_size=train_split, test_size=test_split, random_state=100)
+# df_train, df_test = train_test_split(df, train_size=train_split, test_size=test_split, random_state=100)
+#
+# y_train = pd.DataFrame(df_train["total_revenue"])
+# x_train = df_train.drop('total_revenue', axis=1)
+# y_test = pd.DataFrame(df_test["total_revenue"])
+# x_test = df_test.drop('total_revenue', axis=1)
 
-y_train = pd.DataFrame(df_train["total_revenue"])
-x_train = df_train.drop('total_revenue', axis=1)
-y_test = pd.DataFrame(df_test["total_revenue"])
-x_test = df_test.drop('total_revenue', axis=1)
+y=df["total_revenue"]
+x = df.drop('total_revenue', axis=1)
+
+x_train = x[:int(x.shape[0]*0.7)]
+x_test = x[int(x.shape[0]*0.7):]
+y_train = y[:int(x.shape[0]*0.7)]
+y_test = y[int(x.shape[0]*0.7):]
 
 # vif of trip_miles over 86
 x_train = x_train.drop('trip_miles_tot', axis=1)
@@ -56,7 +65,7 @@ print(score)
 # prediction = reg.predict(x_test)
 
 # fit model via sm
-model = sm.WLS(y_train, x_train, weights=.5)
+model = sm.OLS(y_train, x_train, weights=.5)
 results = model.fit()
 print(results.params)
 print(results.summary())
