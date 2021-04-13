@@ -3,6 +3,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 from sklearn import linear_model
+from sklearn.model_selection import TimeSeriesSplit
 import statsmodels.api as sm
 import lintest
 from sklearn.linear_model import LinearRegression
@@ -14,7 +15,8 @@ from statsmodels.sandbox.regression.predstd import wls_prediction_std
 model = linear_model.LinearRegression()
 train_split = 0.7
 test_split = 0.3
-
+tscv = TimeSeriesSplit(n_splits=5)
+print (tscv)
 # reading in dataset and dropping columns
 df = pd.read_csv("trips_summary_sql.csv")
 
@@ -40,6 +42,17 @@ np.random.seed(0)
 
 y=df["total_revenue"]
 x = df.drop('total_revenue', axis=1)
+
+n_splits = 5
+tscv = TimeSeriesSplit(n_splits)
+for fold, (train_index, test_index) in enumerate(tscv.split(x)):
+    print("Fold: {}".format(fold))
+    print("TRAIN indices:", train_index, "\n", "TEST indices:", test_index)
+    print("\n")
+    X_train, X_test = x[train_index], x[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+
+
 
 x_train = x[:int(x.shape[0]*0.7)]
 x_test = x[int(x.shape[0]*0.7):]
