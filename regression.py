@@ -1,9 +1,7 @@
 import numpy as np
 import pandas as pd
-import statsmodels.api as sm
-from patsy.highlevel import dmatrices
 from sklearn.model_selection import TimeSeriesSplit
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression, PoissonRegressor
 
 
 class Regression:
@@ -11,10 +9,6 @@ class Regression:
         self.select_cols = []
         self.dummy_cols = []
         self.y_col = ''
-
-    def read_csv(self, path):
-        df = pd.read_csv(path)
-        return df
 
     def get_split(self, df, split):
         df_train = df[split]
@@ -37,9 +31,6 @@ class Regression:
         n_splits = 5
         tscv = TimeSeriesSplit(n_splits)
         for fold, (train_index, test_index) in enumerate(tscv.split(x)):
-            # print("Fold: {}".format(fold))
-            # print("TRAIN indices:", train_index, "\n", "TEST indices:", test_index)
-            # print("\n")
             X_train, X_test = x.iloc[train_index], x.iloc[test_index]
             y_train, y_test = y.iloc[train_index], y.iloc[test_index]
             model = LinearRegression()
@@ -49,33 +40,18 @@ class Regression:
             i += 1
         return results
 
-    def multi_regression(self, df, split):
+    def poisson_regression(self, df, split=0.7):
         split = np.random.rand(len(df)) < split
         df = df[self.select_cols]
         df = pd.get_dummies(df, columns=self.dummy_cols, drop_first=True)
         y_train, x_train, y_test, x_test = self.get_split(df, split)
-        model = sm.OLS(y_train, x_train)
-        result = model.fit()
-        return result
+        model = PoissonRegressor()
+        result = model.fit(x_train, y_train)
+        x_train.to_csv('x_train.csv')
+        result_dict = {'model': result, 'score': result.score(x_train, y_train), 'intercept': result.intercept_,
+                       'parameters': {x_train.columns[j]: result.coef_[j] for j in range(len(result.coef_))}}
+        return result_dict
 
-    def poisson_reg(self, df, split, patsy_exp):
-
-        df = df[self.select_cols]
-        df['date'] = pd.to_datetime(df['date'])
-        df = df.set_index('date')
-
-        split = np.random.rand(len(df)) < split
-        df_train = df[split]
-        df_test = df[~split]
-
-        patsy_exp = patsy_exp
-        y_train, X_train = dmatrices(patsy_exp, df_train, return_type='dataframe')
-        y_test, X_test = dmatrices(patsy_exp, df_test, return_type='dataframe')
-
-        poisson_train = sm.GLM(y_train, X_train, family=sm.families.Poisson()).fit()
-        poisson_test = poisson_train.get_prediction(X_test)
-
-        return poisson_train, poisson_test
 
 
 
