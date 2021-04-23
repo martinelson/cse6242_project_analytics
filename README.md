@@ -5,7 +5,7 @@
 This package is the project by team 150 from CSE 6242 @ Georgia Tech. The project is about “Decision Making solution for ride sharing drivers”. The package has files for each of the step Data preparation, model creation and visualization. 
 
 ### Data preparation
-Data_Prep folder has raw data downloaded from city of Chicago public dataset, ipynb with code to extract the data using API & generate aggregated results, Spark code to generate aggregated results directly from uploaded CSV and cleansed and aggregated output datafile to be used by model. 
+Data_Prep folder has ipynb code to extract the data using API & generate aggregated results, Spark code to generate aggregated results directly from uploaded CSV and cleansed and aggregated output datafile to be used by model. 
 ### Model Creation
 Python code package for model creation, training model and predicting the results in csv file.Contains both code as well as static output CSV file. 
 ### Visualization  
