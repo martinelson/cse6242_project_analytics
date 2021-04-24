@@ -2,7 +2,7 @@ import pandas as pd
 from regression import Regression
 
 x = Regression()
-df_predict = pd.read_csv('x_test_original.csv').fillna(0).astype(int)
+df_predict = pd.read_csv('x_test_v2.csv').fillna(0).astype(int)
 
 # READ DATASET
 df = pd.read_csv("trips_summary_covid_pub.csv")

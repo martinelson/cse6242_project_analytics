@@ -43,7 +43,7 @@ class Regression:
     def poisson_regression(self, df, split=0.7):
         split = np.random.rand(len(df)) < split
         df = df[self.select_cols]
-        df = pd.get_dummies(df, columns=self.dummy_cols, drop_first=True)
+        df = pd.get_dummies(df, columns=self.dummy_cols, drop_first=False)
         y_train, x_train, y_test, x_test = self.get_split(df, split)
         model = PoissonRegressor()
         result = model.fit(x_train, y_train)
