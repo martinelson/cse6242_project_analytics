@@ -41,6 +41,8 @@ Output file will be generated in S3 storage bucket. No installation is required 
 
 ### Model Creation
 
+Utilizing the output csv from the data preparation, save the csv in the 2. Output for Viz folder and name the file "trips_summary_covid_pub.csv" (or rename the file to whatever you'd prefer and update the csv name in main_poisson.py on line 8 and in the main_multi.py file on line 6).
+
 Run file main_poisson.py from virtual evniroment to generate prediction output CSV file. 
 
 ### Visualization
