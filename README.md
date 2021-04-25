@@ -14,7 +14,20 @@ This package is the project by team 150 from CSE 6242 @ Georgia Tech. The projec
 * Hover over different community areas to see the predicted revenue, tip and COVID-19 effect.
 
 
+### Folder Structure
 
+├── CODE
+│   ├── D3_Dashboard          # The final version of the project web interface (d3 implementation with the predicted data)
+│   └── Project_Code          # All the code base used to acquire, clean and process the data in addition to d3 data tanformation using python)
+├── DOC 
+│   ├── team150report.pdf     # Final project writeup
+│   └── team150poster.pdf     # Final project poster
+└── README.txt
+
+
+
+
+## Project Implementation
 
 ### Data preparation
 Data_Prep folder has ipynb code to extract the data using API & generate aggregated results, Spark code to generate aggregated results directly from uploaded CSV and cleansed and aggregated output datafile to be used by model. 
