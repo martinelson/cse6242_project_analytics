@@ -1,10 +1,20 @@
 # Decision Making solution for ride sharing drivers
 
-### Note: This app can be accessed through the online hosted version http://smart-drive-app.herokuapp.com/
-
 ## DESCRIPTION
 
 This package is the project by team 150 from CSE 6242 @ Georgia Tech. The project is about “Decision Making solution for ride sharing drivers”. The package has files for each of the step Data preparation, model creation and visualization. 
+
+### Note: This app live demo can be accessed through the online hosted version http://smart-drive-app.herokuapp.com/
+
+## How to run the app locally.
+
+* Copy the contents of D3_Dashboard folder to your machine
+* Navigate to the folder and run any web live server inside the folder (you can use Python http.server package or node.js live-server)
+* open the home.html file to load the web interface for the app.
+* Hover over different community areas to see the predicted revenue, tip and COVID-19 effect.
+
+
+
 
 ### Data preparation
 Data_Prep folder has ipynb code to extract the data using API & generate aggregated results, Spark code to generate aggregated results directly from uploaded CSV and cleansed and aggregated output datafile to be used by model. 
@@ -12,6 +22,10 @@ Data_Prep folder has ipynb code to extract the data using API & generate aggrega
 Python code package for model creation, training model and predicting the results in csv file.Contains both code as well as static output CSV file. 
 ### Visualization  
 .html file with d3.js code for visualization.   
+
+------
+
+
 
 ## INSTALLATION 
 
