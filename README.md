@@ -1,5 +1,7 @@
 # Decision Making solution for ride sharing drivers
 
+#Note: This app can be accessed through the online hosted version http://smart-drive-app.herokuapp.com/
+
 ## DESCRIPTION
 
 This package is the project by team 150 from CSE 6242 @ Georgia Tech. The project is about “Decision Making solution for ride sharing drivers”. The package has files for each of the step Data preparation, model creation and visualization. 
