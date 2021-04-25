@@ -15,14 +15,14 @@ This package is the project by team 150 from CSE 6242 @ Georgia Tech. The projec
 
 
 ### Folder Structure
-
-├── CODE
-│   ├── D3_Dashboard          # The final version of the project web interface (d3 implementation with the predicted data)
-│   └── Project_Code          # All the code base used to acquire, clean and process the data in addition to d3 data tanformation using python)
-├── DOC 
-│   ├── team150report.pdf     # Final project writeup
-│   └── team150poster.pdf     # Final project poster
-└── README.txt
+    .
+    ├── CODE
+    │   ├── D3_Dashboard          # The final version of the project web interface (d3 viz with the predicted data)
+    │   └── Project_Code          # All the code base used to acquire, clean, process and present the data.
+    ├── DOC 
+    │   ├── team150report.pdf     # Final project writeup
+    │   └── team150poster.pdf     # Final project poster
+    └── README.txt
 
 
 
