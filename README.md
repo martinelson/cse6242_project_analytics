@@ -1,6 +1,6 @@
 # Decision Making solution for ride sharing drivers
 
-# Note: This app can be accessed through the online hosted version http://smart-drive-app.herokuapp.com/
+## Note: This app can be accessed through the online hosted version http://smart-drive-app.herokuapp.com/
 
 ## DESCRIPTION
 
