@@ -19,6 +19,8 @@ This package is the project by team 150 from CSE 6242 @ Georgia Tech. The projec
     ├── CODE
     │   ├── D3_Dashboard          # Final version of web interface (d3 viz with the predicted data)
     │   └── Project_Code          # All the code base used to acquire, clean, process and present the data.
+    │       ├── Analytics         # Python codebase used to analyse and test differnet models of the data
+    │       └── data_prep         # Pyspark and python codes used to ingest, aggregate and clean the data
     ├── DOC 
     │   ├── team150report.pdf     # Final project writeup
     │   └── team150poster.pdf     # Final project poster
