@@ -27,7 +27,7 @@ This package is the project by team 150 from CSE 6242 @ Georgia Tech. The projec
 
 
 
-## Project Implementation
+## Project Implementation Code
 
 ### Data preparation
 Data_Prep folder has ipynb code to extract the data using API & generate aggregated results, Spark code to generate aggregated results directly from uploaded CSV and cleansed and aggregated output datafile to be used by model. 
