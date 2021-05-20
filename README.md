@@ -4,6 +4,12 @@
 
 This package is the project by team 150 from CSE 6242 @ Georgia Tech. The project is about “Decision Making solution for ride sharing drivers”. The package has files for each of the step Data preparation, model creation and visualization. 
 
+## Background
+
+Ridesharing services have become a staple in moderntransportation life. A ride to the desired destination is afew clicks away on a mobile device, which is an idea thathas attracted millions of riders and drivers. Companiessuch as Uber and Lyft have amassed remarkable value[1]. These companies use large scale data from cars, dri-vers, traffic lights, maps to come up with sophisticatedalgorithms for pricing, supply and demands forecast.These companies leverage all this information to maxi-mize customer satisfaction and their profits, sometimesat the expense of the drivers. This leaves the driversmore on their own with limited information and /orskills to be more effective [2]. Some studies point thatmost drivers do worse than their opportunity cost (min-imum wage), one of them concludes that 74% of driversearn less than the minimum wage and 30% loss moneyonce all expenses are included [3,4]. In this project, weaim to give drivers valuable information curated to eachdriver’s specific needs. With flexibility in mind, everydriver has different goals that could vary by the day,and our goal is to project earnings and offer data pointsto help them make informed driving choices while theyare offering their labor to the ridesharing economy [5].
+
+
+
 ### Note: This app live demo can be accessed through the online hosted version http://smart-drive-app.herokuapp.com/
 
 ## How to run the app locally.
